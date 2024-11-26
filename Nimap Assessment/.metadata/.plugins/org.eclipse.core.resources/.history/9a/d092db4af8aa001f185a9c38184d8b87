@@ -1,0 +1,27 @@
+package com.mydata.model;
+
+import org.springframework.web.multipart.MultipartFile;
+
+import jakarta.persistence.Entity;
+import jakarta.validation.constraints.*;
+
+@Entity
+public class ProductSave {
+	
+	@NotEmpty(message="Name Is Required")
+	private String name;
+	
+	@NotEmpty(message="Brand Is Required")
+	private String brand;
+	
+	@NotEmpty(message="Category Is Required")
+	private String category;
+	
+	@Min(0)
+	private double price;
+	
+	@Size(min=10, message="The Desacription should be at least 10 cahracters")
+	@Size(max=2000, message="The Desacription cannot exceed 2000 cahracters")
+	private String description;
+	private MultipartFile imageFile;
+}

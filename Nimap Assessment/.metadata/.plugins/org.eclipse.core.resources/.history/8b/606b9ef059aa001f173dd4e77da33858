@@ -1,0 +1,18 @@
+package com.mydata.model;
+
+import java.sql.Date;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="products")
+public class Product {
+	private int id;
+	private String name;
+	private String brand;
+	private double price;
+	private String description;
+	private Date createdAt;
+	private String imageFileName;
+}

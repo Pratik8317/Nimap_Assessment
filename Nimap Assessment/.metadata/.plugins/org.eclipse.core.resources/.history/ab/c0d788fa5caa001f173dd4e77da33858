@@ -1,0 +1,5 @@
+package com.mydata.repository;
+
+public interface ProductRepository {
+
+}
